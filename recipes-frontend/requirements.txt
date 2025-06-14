@@ -1,0 +1,6 @@
+npm i react-router-dom
+install django-cors-headers
+npm i axios
+pip install drf-yasg
+pip install django djangorestframework
+pip install django-filter

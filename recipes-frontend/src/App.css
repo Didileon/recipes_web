@@ -1,0 +1,335 @@
+/* Шапка и навигация */
+.header {
+  background-color: black;
+  color: white;
+  padding: 30px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.nav {
+  position: relative;
+}
+
+/* Основной стиль списка */
+.nav ul {
+  display: flex;
+  justify-content: flex-end;  /* справа */ 
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Элемент списка */
+.nav li {
+  margin-right: 40px;
+}
+
+/* Ссылки */
+.nav-link {
+  display: inline-block; 
+  text-decoration: none;
+  color: #f5deb3;
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* При наведении: увеличивается и меняется цвет */
+.nav-link:hover {
+  color: #ffe4b5;
+  transform: scale(1.2);
+}
+
+/* Активная страница */
+.nav-link.active {
+  font-size: 22px;
+  color: #ffe4b5;
+  transform: scale(1.2);
+}
+
+/* Посещённые и в фокусе */
+.nav-link:visited,
+.nav-link:focus {
+  color: #f5deb3;
+  text-decoration: none;
+}
+
+/* Бургер-кнопка */
+.burger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Адаптивная версия */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: black;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav.open ul {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav li {
+    margin-bottom: 15px;
+  }
+}
+
+/* Основной блок "Главная" */
+.main {
+  background-color: burlywood;
+  color: black;
+  padding: 40px 30px;
+  padding-left: 80px;
+  display: flex;
+  justify-content: left;
+  font-size: 30px;
+}
+
+/* Контейнер текста + изображения */ /* Контейнер под текст */
+.container-div {
+  display: flex;
+  padding: 1%;
+  flex-wrap: wrap; /* позволяет адаптироваться */
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+  background-color: #fffaf0; /* светлый фон для читаемости */
+}
+
+/* Текстовый блок */
+.baseText {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #333;
+}
+
+.baseText h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.baseText ul {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.baseText ul li {
+  margin-bottom: 10px;
+}
+
+/* Изображение */
+.main-image {
+  width: 50%;
+  max-width: none;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .container-div {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .main-image {
+    width: 90%;
+  }
+
+  .baseText {
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+/* CSS для подчёркивания и увеличения при наведении только названия */
+
+.recipe-title-link {
+  text-decoration: none;
+  color: #333;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.recipe-title-link:hover {
+  font-size: 22px;
+  color: #ff8c00;
+}
+
+.title,
+.recipes,
+.categoryrecipes,
+.recipe-title,
+.api,
+.input {
+  background-color: burlywood;
+  color: black;
+  padding: 40px 30px;
+  padding-left: 80px;
+  display: flex;
+  justify-content: left;
+  font-size: 30px;
+}
+
+
+body, h1, h2, h3, p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.category-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+
+.category-list {
+    display: contents;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+     
+}
+
+.category-card {
+    background-color: burlywood;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+}
+
+.category-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.category-link:hover {
+    color: #007bff;
+}
+
+.category-image {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.category-image img {
+    width: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+   
+}
+
+/* Вот выше этого отредактировала */
+
+
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.api {
+  background-color: burlywood;
+  color: black;
+  padding: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+}
+
+.api1 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.api2 {
+  text-align: center;
+  font-size: 16px;
+}
+
+.api3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input {
+  padding: 40px;
+ }
+
+ .inputsearch {
+  padding-top: 40px;
+ }
+ 
+
+.input1 {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.input2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: burlywood;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input2:hover {
+  background-color: burlywood;
+}

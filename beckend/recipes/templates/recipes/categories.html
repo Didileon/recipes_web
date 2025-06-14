@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+
+{% block title %}
+В зависимости от используемых продуктов блюда могут быть овощные, рыбные, мясные, молочные, из яиц, мучные, крупы и т. д.
+{% endblock title %}
+
+{% block content %}
+
+<h2>Категории</h2>
+
+
+
+
+    {% for category in category_list %}
+        <p><a href="{% url 'category-detail' slug=category.slug %}">{{ category.name }}</a></p>
+
+    {% endfor %}
+
+
+{% endblock content %}
